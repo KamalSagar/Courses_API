@@ -1,9 +1,19 @@
 package dev.kamal.courses_api.entities;
 
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
+
+
+@Entity
 public class Course {
+
+    @Id
     private long id;
     private String title;
     private String description;
+
+    public Course() {}
 
     public Course(long id, String title, String description) {
         this.id = id;
